@@ -8,6 +8,7 @@ export const updateUser = async (req, res, next) => {
       { $set: req.body },
       { new: true }
     );
+    
     const { password, isAdmin, ...otherDetails } = updatedUser._doc;
 
     res.status(200).json({ user: { ...otherDetails } });
