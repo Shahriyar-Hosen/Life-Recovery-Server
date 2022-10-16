@@ -9,6 +9,23 @@ const UserSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    jamat: {
+      fajr: {
+        type: String,
+      },
+      dhour: {
+        type: String,
+      },
+      asr: {
+        type: String,
+      },
+      maghrib: {
+        type: String,
+      },
+      isha: {
+        type: String,
+      },
+    },
     country: {
       type: String,
       // required: true,
