@@ -33,8 +33,8 @@ app.use("/api/namaz", namazRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 
-app.get("/", (req, res) => {
-  res.send("server api conacted");
+app.get("/api", (req, res) => {
+  res.send("server api contacted");
 });
 
 app.listen(port, () => {
