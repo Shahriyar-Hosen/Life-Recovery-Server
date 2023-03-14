@@ -19,9 +19,11 @@ const connect = async () => {
   }
 };
 
-mongoose.connection.on("disconnected", () => {
-  console.log("mongoDB disconnected!");
-});
+connect();
+
+// mongoose.connection.on("disconnected", () => {
+//   console.log("mongoDB disconnected!");
+// });
 
 //middlewares
 app.use(cors());
@@ -36,6 +38,5 @@ app.get("/api", (req, res) => {
 });
 
 app.listen(port, () => {
-  connect();
   console.log("Connected to backend.");
 });
